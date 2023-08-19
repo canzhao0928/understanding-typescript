@@ -29,7 +29,11 @@ console.log(person.role);
 
 //union
 
-function combine(input1: number | string, input2: number | string) {
+function combine(
+  input1: number | string,
+  input2: number | string, //union type
+  resultTyle: "as-number" | "as-text" //literal type
+) {
   let result;
   if (typeof input1 === "number" && typeof input2 === "number") {
     result = input1 + input2;
@@ -39,4 +43,4 @@ function combine(input1: number | string, input2: number | string) {
   return result;
 }
 
-console.log(combine("Max is ", 10));
+console.log(combine("Max is ", 10, "as-text"));
